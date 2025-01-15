@@ -70,26 +70,22 @@ export class CheckApprovalBodySchema extends createToolParameters(
         amount: z.string(),
         walletAddress: z.string(),
     }),
-) {}
+) { }
 
 export class GetQuoteBodySchema extends createToolParameters(
     z.object({
-        tokenIn: z.string(),
-        tokenOut: z.string(),
-        tokenInChainId: z.number(),
-        tokenOutChainId: z.number(),
-        amount: z.string(),
-        swapper: z.string(),
-        type: z.nativeEnum(SwapType),
-        protocols: z.array(z.nativeEnum(Protocol)),
+        amountIn: z.number(),
+        amountOutMin: z.number().optional(),
+        fromToken: z.string(),
+        toToken: z.string(),
     }),
-) {}
+) { }
 
 export class GetSwapBodySchema extends createToolParameters(
     z.object({
-        quote: QuoteResponseSchema,
-        permitData: z.any().optional(),
-        signature: z.string().optional(),
-        simulateTransaction: z.boolean().optional(),
+        amountIn: z.number(),
+        amountOutMin: z.number().optional(),
+        fromToken: z.string(),
+        toToken: z.string(),
     }),
-) {}
+) { }
