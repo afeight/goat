@@ -5,7 +5,7 @@ import ABI from "./ABI.json";
 import { CheckApprovalBodySchema, GetSwapBodySchema } from "./parameters";
 import type { UniswapCtorParams } from "./types/UniswapCtorParams";
 export class UniswapService {
-    constructor(private readonly params: UniswapCtorParams) { }
+    constructor(private readonly params: UniswapCtorParams) {}
 
     @Tool({
         description:

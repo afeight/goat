@@ -70,7 +70,7 @@ export class CheckApprovalBodySchema extends createToolParameters(
         amount: z.string(),
         walletAddress: z.string(),
     }),
-) { }
+) {}
 
 export class GetQuoteBodySchema extends createToolParameters(
     z.object({
@@ -79,7 +79,7 @@ export class GetQuoteBodySchema extends createToolParameters(
         fromToken: z.string(),
         toToken: z.string(),
     }),
-) { }
+) {}
 
 export class GetSwapBodySchema extends createToolParameters(
     z.object({
@@ -88,4 +88,4 @@ export class GetSwapBodySchema extends createToolParameters(
         fromToken: z.string(),
         toToken: z.string(),
     }),
-) { }
+) {}
